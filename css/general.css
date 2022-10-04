@@ -13,7 +13,9 @@ Default: 400
 -LINE HEIGHTS
 Default: 1
 1.05
+1.2
 1.6
+1.8
 
 -Letter spacing
 0.75
@@ -231,6 +233,7 @@ body {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  line-height: 1.2;
 }
 
 .list-icon {
