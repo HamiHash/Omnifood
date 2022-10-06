@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv=.section-how"X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="desctiption"
+      content="Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs."
+    />
+
+    <!-- Omnifood-Icons for line-1= browser, line-2=apple, line-3=android -->
+    <link rel="icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/OmnifoodIcon/favicon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,10 +22,11 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- css --->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/queries.css" />
-
+    <!-- Icons -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
@@ -24,16 +35,15 @@
       nomodule
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
     ></script>
-
     <!-- polyfill for safari -->
     <script
       defer
       src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
     ></script>
-
+    <!-- java script -->
     <script defer src="js/script.js"></script>
 
-    <title>Omni Food</title>
+    <title>Omnifood &mdash; Never cook again!</title>
   </head>
   <body>
     <!-- nav-open -->
@@ -91,11 +101,18 @@
             </div>
           </div>
           <div class="hero-img-box">
-            <img
-              src="img/hero.png"
-              alt="Woman enjoying food, meals in storage container, and food bowls on a table"
-              class="hero-img"
-            />
+            <!-- browser will choose one of these too (we did this becouse some safari versions dont support "webp" img format.
+              importnent==> <source> order matters.)-->
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp" />
+              <source srcset="img/hero.png" type="image/png" />
+              <!-- we still have too use <img../> and <picture>.. will change the "src" itself. -->
+              <img
+                src="img/hero.png"
+                class="hero-img"
+                alt="Woman enjoying food, meals in storage container, and food bowls on a table"
+              />
+            </picture>
           </div>
         </div>
       </section>
